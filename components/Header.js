@@ -30,7 +30,7 @@ class Header extends Component {
         <View style={styles.inputContainer}>
           <TextInput
             style={isDarkMode ? styles.inputTextDark : styles.inputText}
-            placeholder='Todo ?ž…? ¥'
+            placeholder='Enter todo'
             placeholderTextColor={isDarkMode ? '#AAA' : '#000'}
             autoCorrect={false}
             value={this.state.newTodo}
@@ -38,19 +38,19 @@ class Header extends Component {
           />
           <TextInput
             style={isDarkMode ? styles.inputTextDark : styles.inputText}
-            placeholder='?‚ ì§? ?ž…? ¥(YYYY-MM-DD)'
+            placeholder='Enter date (YYYY-MM-DD)'
             placeholderTextColor={isDarkMode ? '#AAA' : '#000'}
             autoCorrect={false}
             value={this.state.newTodoDate}
             onChangeText={(newTodoDate) => this.setState({ newTodoDate })}
           />
           <TouchableOpacity onPress={this.addNewTodo}>
-            <MaterialCommunityIcons style={styles.addBtn} size={30} name='plus-circle' />
+            <MaterialCommunityIcons name="plus-circle" size={40} color={isDarkMode ? "#32CD32" : "#32CD32"} />
           </TouchableOpacity>
         </View>
       </View>
-    )
-  }
+    )  
+  }  
 }
 
 const styles = StyleSheet.create({
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   containerDark: {
     marginHorizontal: 20,
     marginBottom: 20,
-    padding: 100,
+    padding: 10, 
     backgroundColor: '#333',
     borderRadius: 10,
   },

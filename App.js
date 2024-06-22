@@ -11,7 +11,7 @@ export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <NavigationContainer> 
+    <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
@@ -22,7 +22,7 @@ export default function App() {
             } else if (route.name === 'Settings') {
               iconName = 'cog';
             }
- f
+
             return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
           },
         })}
